@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Email Server</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+ /* background-color:);*/
+  height: 100px;
+  /*background-color:blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(200deg, rgb(94, 77, 243), rgb(255, 255, 185));
+}
+
+/* Style the header */
+.header {
+  background-color: rgb(255, 255, 215, 0.3);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  .footer {
+  background-color: rgb(255, 255, 215);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Email Server</h1>
+  <p>GROUP [V].</p>
+</div>
+
+
+<div class="topnav">
+  <a href="#">DERRICK KIGAME  CT206/101245/19</a>
+  <a href="#">SYDNEY KIPCHIRCHIR  CT206/101240/19</a>
+  <a href="#">STELLA AKOTH  CT206/101216/19</a>
+  <a href="#">ANTONY MACHARIA  CT206/101083/19</a>
+  <a href="#">ISACK GITHUKU  CT206/10121719</a>
+</div>
+<div class="row">
+  <div class="column">
+    <h2>Checking the Mail Queue</h2>
+    <p>Things like network failure can mean that the mail queue on your Linux email server can end up getting full, but you can check the Postfix mail queue with this command:</p>
+       <p> $ mailq</p>
+       <p> If that reveals that its full then you can flush the queue using this command:</p>
+        <p>$ postfix flush</p>
+  </div>
+  
+  <div class="column">
+    <h2>Testing Linux E-mail Server</h2>
+    <p>The first thing to do is use a local mail user agent such as mailx or mail which is a symlink to mailx.</p>
+        <p>Send your first test to someone on the Linux mail server and if that works then send the next one to somewhere external.</p>
+       <p> for instance "<small example@mydomain.com>" -a /path/to/attachment someone@mydomain.com</p>
+       <p> If you run into any snags, have a peek at the logs. The log files are found in /var/log/mail.log, or wherever else the rsyslogd configuration specifies.
+        
+          </p>
+  </div>
+  
+  <div class="column">
+    <h2>Fighting SpamAssassin</h2>
+    <p>Nobody likes spam, and SpamAssassin is probably the best free, open source spam fighting ninja that you could hope to have in your corner.</p>
+        <p>Installing it is as simple as doing this:</p>
+        <p>$ dnf -y install spamassassin</p>
+        <p>Then you just start the service and activate it at start-up:</p>
+        <p>$ systemctl start spamassassin</p>
+       <p> $ systemctl activate spamassassin</p>
+  </div>
+
+</div>
+
+<div class="footer">
+    <a href="emailconfig2.html" class="previous">&laquo; Previous</a>
+    <a href="emailconfig4.html" class="next">Next &raquo;</a>
+  </div>
+</body>
+</html>

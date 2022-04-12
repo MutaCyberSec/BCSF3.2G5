@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Email Server</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+ /* background-color:);*/
+  height: 100px;
+  /*background-color:blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(200deg, rgb(94, 77, 243), rgb(255, 255, 185));
+}
+
+/* Style the header */
+.header {
+  background-color: rgb(255, 255, 215, 0.3);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  .footer {
+  background-color: rgb(255, 255, 215, 0.5);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Email Server</h1>
+  <p>GROUP [V].</p>
+</div>
+
+<div class="topnav">
+  <a href="#">DERRICK KIGAME  CT206/101245/19</a>
+  <a href="#">SYDNEY KIPCHIRCHIR  CT206/101240/19</a>
+  <a href="#">STELLA AKOTH  CT206/101216/19</a>
+  <a href="#">ANTONY MACHARIA  CT206/101083/19</a>
+  <a href="#">ISACK GITHUKU  CT206/10121719</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>email server</h2>
+    <p>Penetration testing sometimes requires the assembly of various additional tools.</p>
+    <p>For example, a mail server from which you can send phishing emails to check employees for social engineering attacks.</p>
+    <p>This mail server should allow you to send letters from any address and generally ask a minimum of questions when sending.</p> 
+        <p>We will use Postfix as such a server.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Email Server</h2>
+    <p>Setting up Linux mail server and SMTP (Simple Mail Transfer Protocol) is essential if you want to use email.
+      Linux Email Server Components include;
+      <ul>
+        <li> Mail user agent (MUA) is the GUI, the part that lets you write and send emails, like Thunderbird or Outlook.</li>
+         <li>Mail transport agent (MTA) is the bit that moves the mail (as the name suggests). MTAs like Sendmail and Postfix are the parts that waft your communications from place to place through the ether.</li>
+         <li>Mail delivery agent (MDA) is the component that sends out messages sent to you on your local machine, so they get to the appropriate user mailbox. Postfix-maildrop and Procmail are examples.</li>
+      </ul>
+          </p>
+  </div>
+  
+  <div class="column">
+    <h2>Setting Up the Linux Email Server</h2>
+    <p>$ apt-get -y install postfix- command used to install the postfix on Debian and Ubuntu Linux distributions.</p>
+     <p> During configuration of Linux mail server you will receive a prompt to choose how you want to configure your Postfix mail server. Its as follows;</p>
+     <ul>
+       <li>No configuration</li>
+       <li> Internet site</li>
+        <li>Internet with smarthost</li>
+        <li>Satellite system and Local only</li>
+     </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  
+  <!--<button style='font-size:24px'>Previous<i class='fas fa-angle-double-left'></i></button>-->
+  <a href="emailconfig2.html" class="next">Next &raquo;</a>
+  </div>
+</body>
+</html>

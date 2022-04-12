@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Email Server</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+ /* background-color:);*/
+  height: 100px;
+  /*background-color:blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(200deg, rgb(94, 77, 243), rgb(255, 255, 185));
+}
+
+/* Style the header */
+.header {
+  background-color: rgb(255, 255, 215, 0.3);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  .footer {
+  background-color: rgb(255, 255, 215);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Email Server</h1>
+  <p>GROUP [V].</p>
+</div>
+
+<div class="topnav">
+  <a href="#">DERRICK KIGAME  CT206/101245/19</a>
+  <a href="#">SYDNEY KIPCHIRCHIR  CT206/101240/19</a>
+  <a href="#">STELLA AKOTH  CT206/101216/19</a>
+  <a href="#">ANTONY MACHARIA  CT206/101083/19</a>
+  <a href="#">ISACK GITHUKU  CT206/10121719</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>Realtime Blackhole Lists (RBLs)</h2>
+    <p>
+    <p>Used to filter messages before they even get to the Postfix server</p>
+        <p>It can be used to filter both spams and any other message restriction.</p>
+        <p>Some of the examples include;</p>
+        <ul>
+       <li> strict_rfc821_envelopes = yes</li>
+       <li> relay_domains_reject_code = 554</li>
+        <li>unknown_address_reject_code = 554</li>
+        <li>unknown_client_reject_code = 554</li>
+       <li> unknown_hostname_reject_code = 554</li>
+        <li>unknown_local_recipient_reject_code = 554</li>
+        <li>unknown_relay_recipient_reject_code = 554</li>
+       <li> unverified_recipient_reject_code = 554</li>
+        <li>smtpd_recipient_restrictions =</li>
+        </ul>
+    </p>
+  </div>
+  
+  <div class="column">
+    <h2>RBLS</h2>
+    <p>
+      <ul>
+       <li> reject_invalid_hostname,</li>
+        <li>  reject_unknown_recipient_domain,</li>
+            <li> reject_unauth_pipelining,</li>
+                <li> permit_mynetworks,</li>
+                    <li>  permit_sasl_authenticated,</li>
+                        <li> reject_unauth_destination,</li>
+                            <li> reject_rbl_client dsn.rfc-ignorant.org,</li>
+                                <li> reject_rbl_client dul.dnsbl.sorbs.net,</li>
+                                    <li> reject_rbl_client list.dsbl.org,</li>
+                                        <li>  reject_rbl_client sbl-xbl.spamhaus.org,</li>
+                                            <li>  reject_rbl_client bl.spamcop.net,</li>
+                                                <li>   reject_rbl_client dnsbl.sorbs.net,</li>
+      </ul>
+          </p>
+  </div>
+  
+  <div class="column">
+    <h2>Conclusion</h2>
+    <p>The last thing done is restarting both the postfix and the spam assassin using the following commands;</p>
+       <p> $ systemctl restart postfix</p>
+        
+       <p>$ systemctl restart spamassassin</p>
+  </div>
+
+</div>
+
+<div class="footer">
+    <a href="emailconfig3.html" class="previous">&laquo; Previous</a>
+  <!--  <a href="emailconfig4.html" class="next">Next &raquo;</a>-->
+  </div>
+</body>
+</html>

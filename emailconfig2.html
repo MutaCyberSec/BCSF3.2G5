@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Email Server</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+ /* background-color:);*/
+  height: 100px;
+  /*background-color:blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(200deg, rgb(94, 77, 243), rgb(255, 255, 185));
+}
+
+/* Style the header */
+.header {
+  background-color: rgb(255, 255, 215, 0.3);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  .footer {
+  background-color: rgb(255, 255, 215);
+  border-radius: 10%;
+  padding: 20px;
+  text-align: center;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Email Server</h1>
+  <p>GROUP [V].</p>
+</div>
+
+<div class="topnav">
+  <a href="#">DERRICK KIGAME  CT206/101245/19</a>
+  <a href="#">SYDNEY KIPCHIRCHIR  CT206/101240/19</a>
+  <a href="#">STELLA AKOTH  CT206/101216/19</a>
+  <a href="#">ANTONY MACHARIA  CT206/101083/19</a>
+  <a href="#">ISACK GITHUKU  CT206/10121719</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>configuration of the Mail Server</h2>
+    <p>The main configuration for Postfix Linux mail server in the /etc/postfix/main.cf file.</p>
+    <p>The files include various options which include;</p>
+    <p>
+        <ul>
+            <li>myhostname = mail.mydomain.com- to specify the hostname of the mail server, which is where postfix will obtain its emails.</li>
+               <li> myorigin = $exampledomain.com- All emails sent from this mail server will look as though they came from the one that you specify in this option. </li>
+                <li>mydestination = $myhostname, localhost.$exampledomain.com- shows you which domains the Postfix server uses for incoming emails to your Linux email server.
+            </li>
+        </ul>
+    </p>
+  </div>
+  
+  <div class="column">
+    <h2>Configuaration cont</h2>
+    <p>myhostname = mail.mydomain.com- to specify the hostname of the mail server, which is where postfix will obtain its emails.</p>
+       <p> myorigin = $exampledomain.com- All emails sent from this mail server will look as though they came from the one that you specify in this option. </p>
+        <p>mydestination = $myhostname, localhost.$exampledomain.com- shows you which domains the Postfix server uses for incoming emails to your Linux email server.
+          </p>
+  </div>
+  
+  <div class="column">
+    <h2>Configuration cont</h2>
+    <p>$ When you change any of files used to configure Linux mail server for Postfix, you must reload the service, with this directive:</p>
+      <p>  $ systemctl reload postfix</p>
+       <p> Distraction and typing things in can often result in mistakes, but you can track down any misspellings that might compromise your Linux mail server using this command:</p>
+      <p>  $ postfix check</p>
+  </div>
+
+</div>
+
+<div class="footer">
+    <a href="emailconfig.html" class="previous">&laquo; Previous</a>
+    <a href="emailconfig3.html" class="next">Next &raquo;</a>
+  </div>
+</body>
+</html>
